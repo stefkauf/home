@@ -1,0 +1,153 @@
+<HTML>
+<HEAD>
+<TITLE>LING&nbsp;3000Q/5000 - Introduction to Computational Linguistics</TITLE>
+<LINK rel="shortcut icon" type="image/ico" 
+      href="http://stefan-kaufmann.uconn.edu/Pics/segelschiff.ico">
+<STYLE TYPE="text/css">
+BODY, TD { font-family:proxima-nova-n9, proxima-nova, sans-serif;
+	   font-size:90%;
+	   font-shape:italic;
+	   color:#ldldld; }
+</STYLE>
+</HEAD>
+<BODY BGCOLOR=white LINK=#0F1938 VLINK=#AAAAAA ALINK=#AAAAAA>
+
+<div style="position:absolute;
+	top:0px;
+	left:0px;
+	height:100%;
+	width:0px;
+	visibility:hidden;">
+</div>
+<a name="#top"></a>
+
+<TABLE WIDTH=100% HEIGHT=100% BORDER=0 CELLPADDING=1 CELLSPACING=1>
+<TR>
+ <TD COLSPAN=3 HEIGHT=0 WIDTH=100% BGCOLOR=#0F1938>
+  <FONT SIZE=-1 COLOR=#AAAAAA>
+  <CENTER>
+  &nbsp;<STRONG><A HREF="http://stefkauf.github.io/Classes/UConn/CompLing/index.html"STYLE="text-decoration:none;"><FONT COLOR="white">Home</FONT></A></STRONG>&nbsp; |
+  &nbsp;<STRONG><A HREF="http://stefkauf.github.io/Classes/UConn/CompLing/info.html"STYLE="text-decoration:none;"><FONT COLOR="white">Course Info</FONT></A></STRONG>&nbsp; |
+  &nbsp;<STRONG><A HREF="http://stefkauf.github.io/Classes/UConn/CompLing/schedule.html"STYLE="text-decoration:none;"><FONT COLOR="white">Schedule</FONT></A></STRONG>&nbsp; |
+  &nbsp;<STRONG><A HREF="http://stefkauf.github.io/Classes/UConn/CompLing/references.html"STYLE="text-decoration:none;"><FONT COLOR="white">References</FONT></A></STRONG>&nbsp; |
+  <!-- &nbsp;<STRONG><FONT COLOR="#AAAAAA">FAQ</FONT></STRONG>&nbsp; | -->
+  &nbsp;<STRONG><A HREF="http://lms.uconn.edu/"STYLE="text-decoration:none;"><FONT COLOR="white">HuskyCT</FONT></A></STRONG>&nbsp;
+  </CENTER>
+  </FONT>
+  </TD>
+</TR>
+
+<TR>
+<TD WIDTH=2%></TD>
+<TD WIDTH=96% VALIGN=top>
+
+<BR>
+
+<ul>
+  <li><a href="#using IDLE">How do I tell IDLE where to find my
+      files?</a></li>
+  <li><a href="#IDLE command history">How do I scroll through the
+      command history in IDLE?</a></li>
+</ul>
+
+<hr>
+
+<a name="using IDLE"><h4>How do I make IDLE find my files?</h4>
+
+You need to keep your files (e.g., data and Python scripts) in
+directory in which you can permanently store
+things. The <samp>P:</samp> drive is a good option (it's automatically
+mounted when you log in with your NetID); alternatively, you could use
+a USB stick, or a cloud-based system like Dropbox or Google Drive or
+the like. For instance, if I store the file <samp>moby.txt</samp> in
+my Dropbox directory and start IDLE from the Windows Startup menu, I
+get an error message:
+
+<pre><samp>
+>>> myfile = open('moby.txt', 'r')
+
+Traceback (most recent call last):
+File "<pyshell#0>", line 1, in <module>
+myfile = open('moby.txt', 'r')
+IOError: [Errno 2] No such file or directory: 'moby.txt'
+>>>
+</samp></pre>
+
+Basically there are two options:<BR>
+
+<ol>
+  
+  <li>Change the
+    <U>current working directory</U>, so Python will keep looking for
+    (and writing to) files in this directory for the remainder of this
+    session. This requires that you <U>import</U>
+    the <U>module</U> <samp>os</samp> (short for "operating system"):
+
+<pre><samp>
+>>> import os
+>>> os.getcwd()
+'C:\\Python27'
+>>> os.chdir(r'C:\Users\stk12004\Dropbox\Classes\UConn\CompLing\Materials')
+>>> myfile = open('moby.txt', 'r')
+>>>
+</samp></pre>
+  </li>
+
+  <li>OR you can refer to the file with its full path. In this case,
+    the current working directory remains as before, so you'll have to
+    give full paths throughout the session:
+
+<pre><samp>
+>>> myfile = open(r'C:\Users\stk12004\Dropbox\Classes\UConn\CompLing\Materials\moby.txt', 'r')
+>>>
+</samp></pre>
+  </li>
+</ol>
+
+<P><A HREF="#top">&uArr; top of this page</A>
+
+<!-------------------------------------------------->
+<A name="IDLE command history"><h4>How do I scroll through the command
+    history in IDLE?</h4></a>
+
+One convenient feature of the IDLE environment is that it lets you
+scroll through your command history. By default, you do that
+with <samp>Alt-p</samp> and <samp>Alt-n</samp> for the next and
+previous command, respectively. Some people prefer to use the Up- and
+Down- arrows instead. To set this up, do the following in the IDLE
+window:
+
+<pre><samp>
+Options -> Configure IDLE -> Keys
+select "history-next" in the "Costum Key Bindings" menu
+click "Get New Keys for Selection"
+select "Down Arrow"
+click "OK"
+</samp></pre>
+
+You will be prompted (just the first time) to give a name to the key
+setting. Give it one. Then do the analogous thing for
+"history-previous" and the up-arrow. Adjust any other settings to your
+liking.
+
+<P><A HREF="#top">&uArr; top of this page</A>
+
+
+</TD>
+<TD WIDTH=2%></TD>
+</TR>
+
+<TR>
+<TD COLSPAN=3 HEIGHT=100% VALIGN=bottom ALIGN=right>
+ <FONT SIZE=-1>
+ <ADDRESS>
+ Last updated: 2026-11-09
+ </ADDRESS>
+ </FONT>
+ </TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>
+
