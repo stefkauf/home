@@ -1,15 +1,17 @@
-a		{ color:#811515;
-		  text-decoration:none; }
-a:link		{ } /* color and text decoration inherited */
-a:visited	{ } 
-a:hover		{ text-shadow:0px 0px 1px; }
-a:active	{ } /* text-shadow inherited */
 BODY, TD { font-family:proxima-nova-n9, proxima-nova, sans-serif; 
        	 font-size:90%; 
 	 font-shape:italic;
 	 color:#1d1d1d; 
 	 scrollbar-gutter: stable both-edges;
 }
+
+a		{ color:#811515;
+		  text-decoration:none; }
+a:link		{ } /* color and text decoration inherited */
+a:visited	{ } 
+a:hover		{ text-shadow:0px 0px 1px; }
+a:active	{ } /* text-shadow inherited */
+
 .INDEX, .CURRENTINDEX, .OTHERINDEX { 
        	font-size:0.8em;
        	font-weight:bold; 
